@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="calculator">
+        <div id="result">
+            <p style="font-size: 30px;color: red;">Tip Amount: $<span id="tipAmount" style="color:green; font-size: 30px;">0.00</span></p>
+            <p style="font-size: 30px;color: red;">Total Per Person: $<span id="totalPerPerson" style="color:green; font-size: 30px;">0.00</span></p>
+        </div>
+
+        <div id="inputs">
+
+            <input type="number" id="billAmount">
+            <input type="number" id="numberOfPeople">
+            <label for="billAmount" style="position: relative; right: 45px;">bill amount</label>
+            <label for="numberOfPeople">number of people</label>
+        </div>
+
+        <div id="buttons">
+            <button class="tipButton" onclick="calculateTip(5)">5%</button>
+            <button class="tipButton" onclick="calculateTip(10)">10%</button>
+            <button class="tipButton" onclick="calculateTip(15)">15%</button>
+            <button class="tipButton" onclick="calculateTip(20)">20%</button>
+        </div>
+        <button onclick="calculateTotal()" style="background-color: red; color: white;width: 30%; position: relative; left: 160px; top: 40px; height: 30px; font-size: 20px; border: none; border-radius: 10px;">Calculate</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
